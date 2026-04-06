@@ -109,3 +109,79 @@ if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
     print("The year is a leap year")
 else:
     print("The year is not a leap year")
+
+#print the multiplication table for any number (1to10 ) using for loop 
+num = int(input("Enter a number: "))
+print(f"Multiplication table for {num}:")
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+
+#loop through a list of 5 names and print each with its position (use enumerate)
+names = ["Ram", "Shyam", "Sita", "Gita", "Hari"]
+for index, name in enumerate(names, start=1):
+    print(f"{index}. {name}")
+
+#calculate the sum of all even numbers from  1 to 50 using range()
+even_sum = 0
+for n in range(2, 51, 2):
+    even_sum += n
+print(f"Sum of even numbers from 1 to 50: {even_sum}")
+
+#write a countdown from 10 to 1 using a while loop , then print "Liftoff!"
+count = 10
+while count > 0:
+    print(count)
+    count -= 1
+print("Liftoff!")
+
+#keep asking the user for a password until they enter "secret123"
+while True:
+    password = input("Enter password: ")
+    if password == "secret123":
+        print("Access granted")
+        break   
+#create a simple number guessing game : pick a number let the user guess it until they get it right
+import random
+number_to_guess = random.randint(1, 100)
+while True:
+    guess = int(input("Guess the number (1-100): "))
+    if guess < number_to_guess:
+        print("Too low! Try again.")
+    elif guess > number_to_guess:
+        print("Too high! Try again.")
+    else:
+        print("You guessed the number.")
+        break
+
+
+  #write a function is_even(number) that returns true if the number is even and false if it is odd .
+def is_even(number):
+    return number % 2 == 0
+print(is_even(4))  
+print(is_even(7))
+
+#create a function calculate_area(length, width) that returns the area . Use it to calculate area of 3 different rectangles
+def calculate_area(length, width):
+    return length * width
+print(calculate_area(5, 3))
+print(calculate_area(10, 2))
+print(calculate_area(7, 4))
+
+#write a function create_receipt(items,price,quantiy) that returns a formatted string with the total.
+def create_receipt(items, price, quantity):
+    total = price * quantity
+    return f"{quantity} x {items} @ ${price:.2f} each: Total = ${total:.2f}"
+print(create_receipt("Widget", 19.99, 3))
+
+
+
+
+
+
+
+
+
+
+
+
+
